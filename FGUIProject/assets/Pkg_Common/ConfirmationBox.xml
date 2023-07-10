@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="440,255">
+  <displayList>
+    <graph id="n0_qgkn" name="n0" xy="0,0" size="440,255" aspect="true" type="rect" fillColor="#ffcccccc"/>
+    <graph id="n1_qgkn" name="n1" xy="220,5" pivot="0.5,0" anchor="true" size="150,40" group="n3_qgkn" type="rect" fillColor="#ff666666">
+      <relation target="" sidePair="center-center,top-top"/>
+    </graph>
+    <text id="n2_qgkn" name="title" xy="220,5" pivot="0.5,0" anchor="true" size="150,40" group="n3_qgkn" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="Title Name">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n3_qgkn" name="n3" xy="145,5" size="150,40"/>
+    <text id="n4_qgkn" name="content" xy="220,125" pivot="0.5,0.5" anchor="true" size="360,100" fontSize="20" color="#0099ff" align="center" autoSize="none" strokeColor="#000000" text="This is pop dlg content line 1&#xA;This is pop dlg content line 2&#xA;This is pop dlg content line 3">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n6_qgkn" name="btnOk" src="qgkn3" fileName="Btn.xml" xy="45,200">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="OK"/>
+    </component>
+    <component id="n7_qgkn" name="btnCancel" src="qgkn3" fileName="Btn.xml" xy="280,200">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="Cancel"/>
+    </component>
+  </displayList>
+</component>

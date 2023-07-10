@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="4aaf6slt">
-  <resources/>
-  <publish name=""/>
+  <resources>
+    <component id="qgkn1" name="ConfirmationBox.xml" path="/" exported="true"/>
+    <component id="qgkn3" name="Btn.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="" genCode="true"/>
 </packageDescription>
