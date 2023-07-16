@@ -12,7 +12,7 @@
     "codePath": "../Unity/Codes/ModelView/GameLogic/FGUIAutoGen/",
     "classNamePrefix": "FGUI_",
     "memberNamePrefix": "",
-    "packageName": "ET.Client",
+    "packageName": "ET",
     "ignoreNoname": true,
     "getMemberByName": false,
     "codeType": ""
