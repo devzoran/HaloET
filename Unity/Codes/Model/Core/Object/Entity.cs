@@ -962,5 +962,45 @@ namespace ET
             EventSystem.Instance.Awake(component, a, b, c);
             return component;
         }
+
+        public K AddOrGetComponent<K>(bool isFromPool = false) where K : Entity, IAwake, new()
+        {
+            Type type = typeof (K);
+            if (this.components != null && this.components.TryGetValue(type, out var component))
+            {
+                return component as K;
+            }
+
+            component = Create(type, isFromPool);
+            component.Id = this.Id;
+            component.ComponentParent = this;
+            EventSystem.Instance.Awake(component);
+            
+            if (this is IAddComponent)
+            {
+                EventSystem.Instance.AddComponent(this, component);
+            }
+            return component as K;
+        }
+
+        public K AddOrGetComponent<K, P1>(P1 p1, bool isFromPool = false) where K : Entity, IAwake<P1>, new()
+        {
+            Type type = typeof (K);
+            if (this.components != null && this.components.TryGetValue(type, out var component))
+            {
+                return component as K;
+            }
+
+            component = Create(type, isFromPool);
+            component.Id = this.Id;
+            component.ComponentParent = this;
+            EventSystem.Instance.Awake(component, p1);
+            
+            if (this is IAddComponent)
+            {
+                EventSystem.Instance.AddComponent(this, component);
+            }
+            return component as K;
+        }
     }
 }

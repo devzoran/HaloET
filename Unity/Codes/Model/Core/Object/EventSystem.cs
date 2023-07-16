@@ -642,7 +642,7 @@ namespace ET
                     object obj = iEvents[i];
                     if (!(obj is AEventAsync<T> aEvent))
                     {
-                        Log.Error($"event error: {obj.GetType().Name}");
+                        Log.Error($"event error: {obj.GetType().FullName}");
                         continue;
                     }
 
@@ -673,7 +673,7 @@ namespace ET
                 object obj = iEvents[i];
                 if (!(obj is AEvent<T> aEvent))
                 {
-                    Log.Error($"event error: {obj.GetType().Name}");
+                    Log.Error($"event error: {obj.GetType().FullName}");
                     continue;
                 }
                 aEvent.Handle(a);

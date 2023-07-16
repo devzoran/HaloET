@@ -13,6 +13,11 @@ namespace ET
         {
         }
 
+        public T Fetch<T>() where T: class
+        {
+            return this.Fetch(typeof (T)) as T;
+        }
+        
         public Entity Fetch(Type type)
         {
             Queue<Entity> queue = null;

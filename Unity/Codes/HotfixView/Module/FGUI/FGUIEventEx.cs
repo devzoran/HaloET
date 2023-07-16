@@ -1,0 +1,331 @@
+﻿using System;
+using FairyGUI;
+
+namespace ET
+{
+    [FriendClass(typeof(FGUIEventComponent))]
+    public static class FUIEventEx
+    {
+
+        #region AddListnerAsync(this GObject self, Func<ETTask> action)
+
+        public static void AddListnerAsync(this GObject self, Func<ETTask> action, int cd = 0)
+        {
+            async ETTask ClickActionAsync()
+            {
+                FGUIEventComponent.Instance.isClicked = true;
+                await action();
+                FGUIEventComponent.Instance.isClicked = false;
+            }
+
+            self.onClick.Set(() =>
+            {
+                if (FGUIEventComponent.Instance.isClicked)
+                {
+                    return;
+                }
+
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                ClickActionAsync().Coroutine();
+            });
+        }
+
+        public static void AddListnerAsync<P1>(this GObject self, Func<P1, ETTask> action, P1 p1, int cd = 0)
+        {
+            async ETTask ClickActionAsync()
+            {
+                FGUIEventComponent.Instance.isClicked = true;
+                await action(p1);
+                FGUIEventComponent.Instance.isClicked = false;
+            }
+
+            self.onClick.Set(() =>
+            {
+                if (FGUIEventComponent.Instance.isClicked)
+                {
+                    return;
+                }
+
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                ClickActionAsync().Coroutine();
+            });
+        }
+
+        public static void AddListnerAsync<P1, P2>(this GObject self, Func<P1, P2, ETTask> action, P1 p1, P2 p2, int cd = 0)
+        {
+            async ETTask ClickActionAsync()
+            {
+                FGUIEventComponent.Instance.isClicked = true;
+                await action(p1, p2);
+                FGUIEventComponent.Instance.isClicked = false;
+            }
+
+            self.onClick.Set(() =>
+            {
+                if (FGUIEventComponent.Instance.isClicked)
+                {
+                    return;
+                }
+
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                ClickActionAsync().Coroutine();
+            });
+        }
+
+        public static void AddListnerAsync<P1, P2, P3>(this GObject self, Func<P1, P2, P3, ETTask> action, P1 p1, P2 p2, P3 p3, int cd = 0)
+        {
+            async ETTask ClickActionAsync()
+            {
+                FGUIEventComponent.Instance.isClicked = true;
+                await action(p1, p2, p3);
+                FGUIEventComponent.Instance.isClicked = false;
+            }
+
+            self.onClick.Set(() =>
+            {
+                if (FGUIEventComponent.Instance.isClicked)
+                {
+                    return;
+                }
+
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                ClickActionAsync().Coroutine();
+            });
+        }
+
+        #endregion
+
+        #region AddListner(this GObject self, Action action)
+
+        public static void AddListner(this GObject self, Action action, int cd = 0)
+        {
+            self.onClick.Set(() =>
+            {
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                action?.Invoke();
+            });
+        }
+
+        public static void AddListner<P1>(this GObject self, Action<P1> action, P1 p1, int cd = 0)
+        {
+            self.onClick.Set(() =>
+            {
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                action?.Invoke(p1);
+            });
+        }
+
+        public static void AddListner<P1, P2>(this GObject self, Action<P1, P2> action, P1 p1, P2 p2, int cd = 0)
+        {
+            self.onClick.Set(() =>
+            {
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                action?.Invoke(p1, p2);
+            });
+        }
+
+        public static void AddListner<P1, P2, P3>(this GObject self, Action<P1, P2, P3> action, P1 p1, P2 p2, P3 p3, int cd = 0)
+        {
+            self.onClick.Set(() =>
+            {
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                action?.Invoke(p1, p2, p3);
+            });
+        }
+
+        #endregion
+
+        #region AddListnerAsync(this GObject self, Func<EventContext, ETTask> action)
+
+        public static void AddListnerAsync(this GObject self, Func<EventContext, ETTask> action, int cd = 0)
+        {
+            async ETTask ClickActionAsync(EventContext context)
+            {
+                FGUIEventComponent.Instance.isClicked = true;
+                await action(context);
+                FGUIEventComponent.Instance.isClicked = false;
+            }
+
+            self.onClick.Set((context) =>
+            {
+                if (FGUIEventComponent.Instance.isClicked)
+                {
+                    return;
+                }
+
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                ClickActionAsync(context).Coroutine();
+            });
+        }
+
+        public static void AddListnerAsync<P1>(this GObject self, Func<EventContext, P1, ETTask> action, P1 p1, int cd = 0)
+        {
+            async ETTask ClickActionAsync(EventContext context)
+            {
+                FGUIEventComponent.Instance.isClicked = true;
+                await action(context, p1);
+                FGUIEventComponent.Instance.isClicked = false;
+            }
+
+            self.onClick.Set((context) =>
+            {
+                if (FGUIEventComponent.Instance.isClicked)
+                {
+                    return;
+                }
+
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                ClickActionAsync(context).Coroutine();
+            });
+        }
+
+        public static void AddListnerAsync<P1, P2>(this GObject self, Func<EventContext, P1, P2, ETTask> action, P1 p1, P2 p2, int cd = 0)
+        {
+            async ETTask ClickActionAsync(EventContext context)
+            {
+                FGUIEventComponent.Instance.isClicked = true;
+                await action(context, p1, p2);
+                FGUIEventComponent.Instance.isClicked = false;
+            }
+
+            self.onClick.Set((context) =>
+            {
+                if (FGUIEventComponent.Instance.isClicked)
+                {
+                    return;
+                }
+
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                ClickActionAsync(context).Coroutine();
+            });
+        }
+
+        public static void AddListnerAsync<P1, P2, P3>(this GObject self, Func<EventContext, P1, P2, P3, ETTask> action, P1 p1, P2 p2, P3 p3,
+        int cd = 0)
+        {
+            async ETTask ClickActionAsync(EventContext context)
+            {
+                FGUIEventComponent.Instance.isClicked = true;
+                await action(context, p1, p2, p3);
+                FGUIEventComponent.Instance.isClicked = false;
+            }
+
+            self.onClick.Set((context) =>
+            {
+                if (FGUIEventComponent.Instance.isClicked)
+                {
+                    return;
+                }
+
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                ClickActionAsync(context).Coroutine();
+            });
+        }
+
+        #endregion
+
+        #region AddListner(this GObject self, Action<EventContext> action)
+
+        public static void AddListner(this GObject self, Action<EventContext> action, int cd = 0)
+        {
+            self.onClick.Set((contex) =>
+            {
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                action?.Invoke(contex);
+            });
+        }
+
+        public static void AddListner<P1>(this GObject self, Action<EventContext, P1> action, P1 p1, int cd = 0)
+        {
+            self.onClick.Set((contex) =>
+            {
+                if (FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                action?.Invoke(contex, p1);
+            });
+        }
+
+        public static void AddListner<P1, P2>(this GObject self, Action<EventContext, P1, P2> action, P1 p1, P2 p2, int cd = 0)
+        {
+            self.onClick.Set((contex) =>
+            {
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                action?.Invoke(contex, p1, p2);
+            });
+        }
+
+        public static void AddListner<P1, P2, P3>(this GObject self, Action<EventContext, P1, P2, P3> action, P1 p1, P2 p2, P3 p3, int cd = 0)
+        {
+            self.onClick.Set((contex) =>
+            {
+                if (cd > 0 && FGUIEventComponent.Instance.FGUICD.CheckCD(self.displayObject.id, cd))
+                {
+                    return;
+                }
+
+                action?.Invoke(contex, p1, p2, p3);
+            });
+        }
+
+        #endregion
+    }
+}
