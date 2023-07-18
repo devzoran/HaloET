@@ -21,16 +21,85 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Tools\Analyzer\Analyzer.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+      <ProjectReference Include="..\..\Tools\Analyzer\Analyzer.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
       <ProjectReference Include="..\Model\Robot.Model.csproj" />
     </ItemGroup>
     
     <ItemGroup>
-        <Compile Include="..\..\Server\Hotfix\Demo\Session\InnerMessageDispatcherHelper.cs">
+        <Compile Include="..\..\Server\Hotfix\GameLogic\Session\InnerMessageDispatcherHelper.cs">
           <Link>Server\Session\InnerMessageDispatcherHelper.cs</Link>
         </Compile>
-        <Compile Include="..\..\Server\Hotfix\Demo\Session\SessionStreamDispatcherServerInner.cs">
+        <Compile Include="..\..\Server\Hotfix\GameLogic\Session\SessionStreamDispatcherServerInner.cs">
           <Link>Server\Session\SessionStreamDispatcherServerInner.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\AI\AI_Attack.cs">
+          <Link>GameLogic\AI\AI_Attack.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\AI\AI_XunLuo.cs">
+          <Link>GameLogic\AI\AI_XunLuo.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\AI\XunLuoPathComponentSystem.cs">
+          <Link>GameLogic\AI\XunLuoPathComponentSystem.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\ConstValue.cs">
+          <Link>GameLogic\ConstValue.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Login\EnterMapHelper.cs">
+          <Link>GameLogic\Login\EnterMapHelper.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Login\LoginHelper.cs">
+          <Link>GameLogic\Login\LoginHelper.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Move\M2C_PathfindingResultHandler.cs">
+          <Link>GameLogic\Move\M2C_PathfindingResultHandler.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Move\M2C_StopHandler.cs">
+          <Link>GameLogic\Move\M2C_StopHandler.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Move\MoveComponentSystem.cs">
+          <Link>GameLogic\Move\MoveComponentSystem.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Move\MoveHelper.cs">
+          <Link>GameLogic\Move\MoveHelper.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Scene\CurrentScenesComponentSystem.cs">
+          <Link>GameLogic\Scene\CurrentScenesComponentSystem.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Scene\M2C_StartSceneChangeHandler.cs">
+          <Link>GameLogic\Scene\M2C_StartSceneChangeHandler.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Scene\SceneChangeHelper.cs">
+          <Link>GameLogic\Scene\SceneChangeHelper.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Scene\SceneFactory.cs">
+          <Link>GameLogic\Scene\SceneFactory.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Session\SessionComponentSystem.cs">
+          <Link>GameLogic\Session\SessionComponentSystem.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Session\SessionStreamDispatcherClientOuter.cs">
+          <Link>GameLogic\Session\SessionStreamDispatcherClientOuter.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Unit\M2C_CreateMyUnitHandler.cs">
+          <Link>GameLogic\Unit\M2C_CreateMyUnitHandler.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Unit\M2C_CreateUnitsHandler.cs">
+          <Link>GameLogic\Unit\M2C_CreateUnitsHandler.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Unit\M2C_RemoveUnitsHandler.cs">
+          <Link>GameLogic\Unit\M2C_RemoveUnitsHandler.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Unit\UnitComponent.cs">
+          <Link>GameLogic\Unit\UnitComponent.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Unit\UnitFactory.cs">
+          <Link>GameLogic\Unit\UnitFactory.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Unit\UnitHelper.cs">
+          <Link>GameLogic\Unit\UnitHelper.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\Unit\UnitSystem.cs">
+          <Link>GameLogic\Unit\UnitSystem.cs</Link>
         </Compile>
         <Compile Include="..\..\Unity\Codes\Hotfix\Module\AI\**\*.cs">
             <Link>Module\AI\%(RecursiveDir)%(FileName)%(Extension)</Link>
@@ -64,8 +133,8 @@
             <Link>Module\NetworkTCP\%(RecursiveDir)%(FileName)%(Extension)</Link>
         </Compile>
 
-        <Compile Include="..\..\Unity\Codes\Hotfix\Demo\**\*.cs"> 
-            <Link>Demo\%(RecursiveDir)%(FileName)%(Extension)</Link>
+        <Compile Include="..\..\Unity\Codes\Hotfix\GameLogic\**\*.cs"> 
+            <Link>GameLogic\%(RecursiveDir)%(FileName)%(Extension)</Link>
         </Compile>
 
         <Compile Include="..\..\Unity\Codes\Hotfix\Core\**\*.cs">
@@ -85,16 +154,12 @@
         </Compile>
 
         <Compile Include="..\..\Server\Hotfix\Module\Console\**\*.cs">
-            <Link>Module\Console\%(RecursiveDir)%(FileName)%(Extension)</Link>
+            <Link>Module\Console\%(RecursiveDir)%(FileName)%(Extension)</Link> 
         </Compile>
 
         <Compile Include="..\..\Server\Hotfix\Config\**\*.cs">
             <Link>Config\%(RecursiveDir)%(FileName)%(Extension)</Link>
         </Compile>
-    </ItemGroup>
-    
-    <ItemGroup>
-      <Folder Include="Server" />
     </ItemGroup>
 
 </Project>

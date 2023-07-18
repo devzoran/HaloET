@@ -1,10 +1,8 @@
 # HaloET Project
-***
 * Unity 编辑器版本 2021.3.27f1
 * FairyGUI
 
 # NOTES
-***
 
 ### 目前客户端共有5个程序集，其作用如下 
 
@@ -33,9 +31,6 @@
 如果一开始就定好这样的结构，压测机器人完全可以利用客户端逻辑层的代码，节省大量时间
 
 <br/>
-
-***
-
 
 ### 贴个关于`EventSystem.PublishAsync` 方法的排查记录
 ```csharp {.line-numbers}

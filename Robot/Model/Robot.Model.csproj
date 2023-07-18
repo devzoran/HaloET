@@ -34,6 +34,45 @@
         <Compile Include="..\..\Server\Model\Config\ConfigLoader.cs">
           <Link>Config\ConfigLoader.cs</Link>
         </Compile>
+        <Compile Include="..\..\Unity\Codes\Model\GameLogic\AI\XunLuoPathComponent.cs">
+          <Link>GameLogic\AI\XunLuoPathComponent.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Model\GameLogic\EventType.cs">
+          <Link>GameLogic\EventType.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Model\GameLogic\Helper\PositionHelper.cs">
+          <Link>GameLogic\Helper\PositionHelper.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Model\GameLogic\Move\MoveComponent.cs">
+          <Link>GameLogic\Move\MoveComponent.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Model\GameLogic\Scene\CurrentScenesComponent.cs">
+          <Link>GameLogic\Scene\CurrentScenesComponent.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Model\GameLogic\SessionStreamDispatcherType.cs">
+          <Link>GameLogic\SessionStreamDispatcherType.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Model\GameLogic\Session\SessionComponent.cs">
+          <Link>GameLogic\Session\SessionComponent.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Model\GameLogic\TimerType.cs">
+          <Link>GameLogic\TimerType.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Model\GameLogic\Unit\PlayerComponent.cs">
+          <Link>GameLogic\Unit\PlayerComponent.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Model\GameLogic\Unit\Unit.cs">
+          <Link>GameLogic\Unit\Unit.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Model\GameLogic\Unit\UnitComponent.cs">
+          <Link>GameLogic\Unit\UnitComponent.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Model\GameLogic\Unit\UnitType.cs">
+          <Link>GameLogic\Unit\UnitType.cs</Link>
+        </Compile>
+        <Compile Include="..\..\Unity\Codes\Model\GameLogic\WaitType.cs">
+          <Link>GameLogic\WaitType.cs</Link>
+        </Compile>
         <Compile Include="..\..\Unity\Codes\Model\Module\Config\**\*.cs">
             <Link>Module\Config\%(RecursiveDir)%(FileName)%(Extension)</Link>
         </Compile>
