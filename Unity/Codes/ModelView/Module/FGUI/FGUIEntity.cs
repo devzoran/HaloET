@@ -2,6 +2,8 @@
 
 namespace ET
 {
+    [EnableMethod]
+    // [ChildType(typeof(FGUIComponent))]
     public class FGUIEntity : Entity, IAwake, IAwake<ShowPanelData>
     {
         public bool IsPreLoad

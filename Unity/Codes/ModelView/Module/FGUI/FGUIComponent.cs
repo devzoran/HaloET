@@ -3,6 +3,7 @@
 namespace ET
 {
     [ComponentOf(typeof(Scene))]
+    [ChildType(typeof(FGUIEntity))]
     public class FGUIComponent : Entity, IAwake, IDestroy
     {
         public static FGUIComponent Instance;

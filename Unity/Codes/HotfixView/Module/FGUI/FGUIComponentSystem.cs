@@ -24,7 +24,9 @@ namespace ET
         }
     }
     
-    [FriendClass(typeof(FGUIComponent))]
+    [FriendClass(typeof (FGUIEventComponent))]
+    [FriendClass(typeof (FGUIEntity))]
+    [FriendClass(typeof (FGUIComponent))]
     public static class FGUIComponentSystem
     {
         public static void Awake(this FGUIComponent self)
