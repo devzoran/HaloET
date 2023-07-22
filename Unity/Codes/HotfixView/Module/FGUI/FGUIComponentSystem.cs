@@ -35,7 +35,7 @@ namespace ET
             // self.AddComponent<CDComponent>();
 
             //初始化fui设置
-            GRoot.inst.SetContentScaleFactor(1920, 1080, UIContentScaler.ScreenMatchMode.MatchHeight);
+            GRoot.inst.SetContentScaleFactor(1366, 768, UIContentScaler.ScreenMatchMode.MatchWidthOrHeight);
 
             self.AllPanelsDic?.Clear();
             self.VisiblePanelsDic?.Clear();

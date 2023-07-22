@@ -23,9 +23,9 @@ namespace ET.Pkg_Confirm
             base.ConstructFromXML(xml);
 
             title = (GTextField)GetChildAt(2);
-            content = (GTextField)GetChildAt(3);
-            btnOk = (GButton)GetChildAt(4);
-            btnCancel = (GButton)GetChildAt(5);
+            content = (GTextField)GetChildAt(5);
+            btnOk = (GButton)GetChildAt(7);
+            btnCancel = (GButton)GetChildAt(8);
         }
     }
 }
