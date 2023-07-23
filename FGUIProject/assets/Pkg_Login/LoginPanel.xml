@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="1366,768" bgColorEnabled="true" bgColor="#3399ff">
-  <displayList>
-    <component id="n0_10vfh" name="n0" src="qgkn1" fileName="ConfirmationBox.xml" pkg="4aaf6slt" xy="683,384" pivot="0.5,0.5" anchor="true"/>
-  </displayList>
-</component>
