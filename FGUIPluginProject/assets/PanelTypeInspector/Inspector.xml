@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="270,86" bgColorEnabled="true" bgColor="#383838">
+  <displayList>
+    <text id="n0_qtla" name="n0" xy="4,8" size="71,19" fontSize="12" color="#bdbdbd" autoSize="none" text="界面类型："/>
+    <component id="n1_qtla" name="comboBox" src="gcza18" fileName="ComboBox/ComboBox.xml" pkg="nk9ejx23" xy="86,7" size="166,20">
+      <ComboBox title="Unknown" visibleItemCount="10">
+        <item title="Unknown"/>
+        <item title="界面" value="Panel"/>
+        <item title="子部件" value="Compoent"/>
+      </ComboBox>
+    </component>
+  </displayList>
+</component>
