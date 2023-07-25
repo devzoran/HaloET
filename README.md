@@ -68,3 +68,25 @@ public async ETTask PublishAsync<T>(T a) where T : struct
     }
 }
 ```
+
+<br/>
+
+### FGUI 结构说明
+    
+- ModelView
+
+    ![ClientModelViewTreeView.png](Book%2FREADMERES%2FClientModelViewTreeView.png)
+
+    - GameLogic/FGUIAutoGen
+  
+        脚本自动生成的相关包逻辑代码，并添加对应包的枚举类型到 PanelId.cs 脚本中；
+  
+        路径下是否存在对应 FairyGUI 编辑器代码通过如下截图设置：
+        ![ClientFguiAutoGenPathSetting.png](Book%2FREADMERES%2FClientFguiAutoGenPathSetting.png)
+
+    - GameLogic/FGUI
+        
+        FairyGUI 编辑器导出生成代码后，通过 Unity 编辑器 FGUIExtensionAutoGen 自动生成(TODO)。
+        
+        
+    

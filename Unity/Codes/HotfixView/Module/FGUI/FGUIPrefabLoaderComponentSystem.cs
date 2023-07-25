@@ -3,27 +3,27 @@ using UnityEngine;
 
 namespace ET
 {
-	[FriendClass(typeof(FGUIPrefabLoaderComponent))]
+	[FriendClass(typeof(FUIPrefabLoaderComponent))]
 	public static class FGUIPrefabLoaderComponentSystem
 	{
 		[ObjectSystem]
-		public class AwakeSystem1 : AwakeSystem<FGUIPrefabLoaderComponent, GGraph, string>
+		public class AwakeSystem1 : AwakeSystem<FUIPrefabLoaderComponent, GGraph, string>
 		{
-			public override void Awake(FGUIPrefabLoaderComponent self, GGraph graph, string locationName)
+			public override void Awake(FUIPrefabLoaderComponent self, GGraph graph, string locationName)
 			{
 				self.Awake(graph, locationName).Coroutine();
 			}
 		}
 		[ObjectSystem]
-		public class DestroySystem : DestroySystem<FGUIPrefabLoaderComponent>
+		public class DestroySystem : DestroySystem<FUIPrefabLoaderComponent>
 		{
-			public override void Destroy(FGUIPrefabLoaderComponent self)
+			public override void Destroy(FUIPrefabLoaderComponent self)
 			{
 				self.OnDestroy();
 			}
 		}
 
-		private static async ETTask Awake(this FGUIPrefabLoaderComponent self, GGraph graph, string locationName)
+		private static async ETTask Awake(this FUIPrefabLoaderComponent self, GGraph graph, string locationName)
 		{
 			graph.visible = false;
 			self.AssetLocationName = locationName;
@@ -38,7 +38,7 @@ namespace ET
 		    graph.visible = true;
 		}
 
-		private static void ShowPrefab(this FGUIPrefabLoaderComponent self, GGraph graph, GameObject prefab)
+		private static void ShowPrefab(this FUIPrefabLoaderComponent self, GGraph graph, GameObject prefab)
 		{
 			self.Graph = graph;
 			
@@ -54,7 +54,7 @@ namespace ET
 			self.Graph.SetNativeObject(self.Wrapper);
 		}
 
-		private static void SetPosAndRot(this FGUIPrefabLoaderComponent self, Vector3 pos, Quaternion rot , Vector3 scale)
+		private static void SetPosAndRot(this FUIPrefabLoaderComponent self, Vector3 pos, Quaternion rot , Vector3 scale)
 		{
 			Transform trans = self.GetComponent<GameObjectComponent>().GameObject.transform;
 
@@ -65,7 +65,7 @@ namespace ET
 			self.Refresh();
 		}
 		
-		public static void SetRot(this FGUIPrefabLoaderComponent self, Quaternion rot)
+		public static void SetRot(this FUIPrefabLoaderComponent self, Quaternion rot)
 		{
 			Transform trans = self.GetComponent<GameObjectComponent>().GameObject.transform;
 
@@ -73,7 +73,7 @@ namespace ET
 			self.Refresh();
 		}
 		
-		public static void AddRot(this FGUIPrefabLoaderComponent self, Quaternion rot)
+		public static void AddRot(this FUIPrefabLoaderComponent self, Quaternion rot)
 		{
 			Transform trans = self.GetComponent<GameObjectComponent>().GameObject.transform;
 			
@@ -85,12 +85,12 @@ namespace ET
 		/// 刷新显示的prefab
 		/// </summary>
 		/// <param name="self"></param>
-		private static void Refresh(this FGUIPrefabLoaderComponent self)
+		private static void Refresh(this FUIPrefabLoaderComponent self)
 		{
 			self.Wrapper.CacheRenderers();
 		}
 
-		private static void OnDestroy(this FGUIPrefabLoaderComponent self)
+		private static void OnDestroy(this FUIPrefabLoaderComponent self)
 		{
 			self.Wrapper?.Dispose();
 			self.Wrapper = null;
