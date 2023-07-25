@@ -9,9 +9,9 @@ namespace ET
             // zoneScene.AddComponent<UIComponent>();
             zoneScene.AddComponent<ResourcesLoaderComponent>();
 
-            zoneScene.AddComponent<FGUIEventComponent>()
+            zoneScene.AddComponent<FUIEventComponent>()
                     .AddComponent<CDComponent>();
-            zoneScene.AddOrGetComponent<FGUIComponent>();
+            zoneScene.AddOrGetComponent<FUIComponent>();
         }
     }
 }
