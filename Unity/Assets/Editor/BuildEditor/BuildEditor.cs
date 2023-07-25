@@ -1,11 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-
+﻿using FUIEditor;
 using UnityEditor;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace ET
 {
@@ -104,7 +99,21 @@ namespace ET
 				BuildHelper.Build(this.platformType, this.buildAssetBundleOptions, this.buildOptions, this.isBuildExe, this.isContainAB, this.clearFolder);
 			}
 
+			GUILayout.Space(20);
+			
+			GUILayout.Label("FairyGUI");
 			GUILayout.Space(5);
+			if (GUILayout.Button("FUI代码生成"))
+			{
+				FUICodeSpawner.FUICodeParseAndSpawn();
+				ShowNotification("FUI代码生成成功！");
+			}
 		}
+        
+        public static void ShowNotification(string tips)
+        {
+	        EditorWindow game = EditorWindow.GetWindow(typeof(ET.BuildEditor).Assembly.GetType("ET.BuildEditor"));
+	        game?.ShowNotification(new GUIContent($"{tips}"));
+        }
 	}
 }
