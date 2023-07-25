@@ -1,5 +1,5 @@
 {
-  "path": "../Unity/Assets/Bundles/FGUI/{publish_file_name}/",
+  "path": "../Unity/Assets/Bundles/FUI/{publish_file_name}/",
   "branchPath": "",
   "fileExtension": "bytes",
   "packageCount": 2,
@@ -8,9 +8,9 @@
   "jpegQuality": 80,
   "compressPNG": false,
   "codeGeneration": {
-    "allowGenCode": true,
-    "codePath": "../Unity/Codes/ModelView/GameLogic/FGUIAutoGen/",
-    "classNamePrefix": "FGUI_",
+    "allowGenCode": false,
+    "codePath": "../Unity/Codes/ModelView/GameLogic/FUIAutoGen/",
+    "classNamePrefix": "FUI_",
     "memberNamePrefix": "",
     "packageName": "ET",
     "ignoreNoname": true,

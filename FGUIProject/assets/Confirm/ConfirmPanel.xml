@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1366,768" remark="Panel">
+  <displayList>
+    <graph id="n11_jghw" name="n0" xy="683,384" pivot="0.5,0.5" anchor="true" size="800,540" type="rect" fillColor="#ffcccccc"/>
+    <graph id="n1_qgkn" name="n2" xy="525,115" size="314,55" group="n10_jghw" type="rect" fillColor="#ff666666">
+      <relation target="n10_jghw" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n2_qgkn" name="title" xy="525,115" size="314,55" group="n10_jghw" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="Title Name">
+      <relation target="n10_jghw" sidePair="width-width,height-height"/>
+    </text>
+    <group id="n10_jghw" name="n1" xy="525,115" size="314,55" advanced="true"/>
+    <graph id="n12_jghw" name="n4" xy="332,217" size="700,310" group="n13_jghw" type="rect" fillColor="#ff999999"/>
+    <text id="n4_qgkn" name="content" xy="332,217" size="700,310" group="n13_jghw" fontSize="20" color="#0099ff" align="center" vAlign="middle" autoSize="none" strokeColor="#000000" text="This is pop dlg content line 1&#xA;This is pop dlg content line 2&#xA;This is pop dlg content line 3"/>
+    <group id="n13_jghw" name="n3" xy="332,217" size="700,310" advanced="true"/>
+    <component id="n6_qgkn" name="btnOk" src="qgkn3" fileName="components/Btn.xml" xy="442,581" size="150,35" group="n14_jghw">
+      <relation target="n14_jghw" sidePair="left-center,right-center"/>
+      <Button title="OK"/>
+    </component>
+    <component id="n7_qgkn" name="btnCancel" src="qgkn3" fileName="components/Btn.xml" xy="803,581" size="150,35" group="n14_jghw">
+      <relation target="n14_jghw" sidePair="left-center,right-center"/>
+      <Button title="Cancel"/>
+    </component>
+    <group id="n14_jghw" name="n5" xy="442,581" size="511,35" advanced="true"/>
+  </displayList>
+</component>

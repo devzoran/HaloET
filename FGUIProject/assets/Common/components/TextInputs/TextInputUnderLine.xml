@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,40" remark="Compoent">
+  <displayList>
+    <text id="n0_o73h" name="inputText" xy="0,0" size="300,40" fontSize="20" color="#83b3c8" autoSize="none" text="" input="true" prompt="[i][color=#999999]Input here[/color][/i]"/>
+    <text id="n1_o73h" name="n1" xy="0,0" size="300,40" fontSize="20" color="#6195aa" vAlign="bottom" autoSize="none" underline="true" singleLine="true" text="                                                             "/>
+  </displayList>
+</component>

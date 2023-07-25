@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="1zi7ydbo">
+  <resources>
+    <component id="o73h0" name="GlobalButton1.xml" path="/components/Buttons/" exported="true"/>
+    <component id="o73h1" name="GlobalButton2.xml" path="/components/Buttons/" exported="true"/>
+    <component id="o73h2" name="TextInputUnderLine.xml" path="/components/TextInputs/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

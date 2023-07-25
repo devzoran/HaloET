@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1366,768" bgColorEnabled="true" bgColor="#256d84" remark="Panel">
+  <displayList>
+    <component id="n11_o73h" name="inputTextUsername" src="o73h2" fileName="components/TextInputs/TextInputUnderLine.xml" pkg="1zi7ydbo" xy="545,250"/>
+    <component id="n12_o73h" name="inputTextPassword" src="o73h2" fileName="components/TextInputs/TextInputUnderLine.xml" pkg="1zi7ydbo" xy="545,312"/>
+    <component id="n3_o73h" name="btnLogin" src="o73h0" fileName="components/Buttons/GlobalButton1.xml" pkg="1zi7ydbo" xy="416,408" group="n6_o73h">
+      <Button title="Login In"/>
+    </component>
+    <component id="n5_o73h" name="btnSignUp" src="o73h1" fileName="components/Buttons/GlobalButton2.xml" pkg="1zi7ydbo" xy="768,408" group="n6_o73h">
+      <Button title="Sign Up"/>
+    </component>
+    <group id="n6_o73h" name="n4" xy="416,408" size="557,50"/>
+  </displayList>
+</component>

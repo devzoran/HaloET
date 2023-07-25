@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600">
+  <displayList>
+    <list id="n0_t54s" name="n0" xy="75,48" size="200,300" overflow="scroll"/>
+    <list id="n1_t54s" name="n1" xy="384,47" size="200,300" overflow="scroll"/>
+  </displayList>
+</component>

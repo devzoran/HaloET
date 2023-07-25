@@ -1,0 +1,11 @@
+{
+  "name": "com.haloet.plugin.paneltypeinspector",
+  "displayName": "Panel Type Inspector",
+  "description": "Custom your panel extension type for exporting",
+  "version": "1.0.0",
+  "author": {
+    "name": "Zoran"
+  },
+  "icon": "",
+  "main": "main.lua"
+}
