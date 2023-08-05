@@ -4,7 +4,7 @@ namespace ET
 {
     // [EnableMethod]
     [ChildType(typeof(FUIComponent))]
-    public class FUIEntity : Entity, IAwake, IAwake<ShowPanelData>
+    public class FUIEntity : Entity, IAwake, IDestroy
     {
         public bool IsPreLoad
         {
@@ -28,11 +28,13 @@ namespace ET
         }
       
         private PanelId panelId = PanelId.Invalid;
-        
-        public UIPanelType panelType = UIPanelType.Normal;
 
         public GComponent GComponent { get; set; }
         
         public PanelCoreData PanelCoreData { get; set; }
+        
+        public Entity ContextData { get; set; }
+        
+        public bool IsUsingStack;
     }
 }

@@ -3,11 +3,26 @@
 namespace ET
 {
     [ObjectSystem]
-    public class FUIEntityAwakeSystem : AwakeSystem<FUIEntity, ShowPanelData>
+    public class FUIEntityAwakeSystem : AwakeSystem<FUIEntity>
     {
-        public override void Awake(FUIEntity self, ShowPanelData data)
+        public override void Awake(FUIEntity self)
         {
-            self.AddComponent(data);
+            self.PanelCoreData = self.AddComponent<PanelCoreData>();
+        }
+    }
+    
+    [ObjectSystem]
+    public class FUIEntityDestroySystem : DestroySystem<FUIEntity>
+    {
+        public override void Destroy(FUIEntity self)
+        {
+            self.PanelCoreData?.Dispose();
+            self.PanelId = PanelId.Invalid;
+            if (self.GComponent != null)
+            {
+                self.GComponent.Dispose();
+                self.GComponent = null;
+            }
         }
     }
     

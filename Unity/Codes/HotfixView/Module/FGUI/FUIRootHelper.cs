@@ -3,7 +3,7 @@
 namespace ET
 {
     [FriendClass(typeof(GlobalComponent))]
-    public static class FGUIRootHelper
+    public static class FUIRootHelper
     {
         public static void Init()
         {

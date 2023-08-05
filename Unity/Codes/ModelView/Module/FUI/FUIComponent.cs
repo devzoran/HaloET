@@ -6,19 +6,17 @@ namespace ET
     [ChildType(typeof(FUIEntity))]
     public class FUIComponent : Entity, IAwake, IDestroy
     {
-        public static FUIComponent Instance;
+        public List<PanelId> VisiblePanelsQueue = new(10);
         
-        public List<PanelId> VisiblePanelsQueue = new List<PanelId>(10);
+        public Dictionary<int, FUIEntity> AllPanelsDic = new(10);
         
-        public Dictionary<int, FUIEntity> AllPanelsDic = new Dictionary<int, FUIEntity>(10);
+        public List<PanelId> FUIEntitylistCached = new(10);
         
-        public List<PanelId> FUIEntitylistCached = new List<PanelId>(10);
+        public Dictionary<int, FUIEntity> VisiblePanelsDic = new();
         
-        public QueueDictionary<int, FUIEntity> VisiblePanelsDic = new QueueDictionary<int, FUIEntity>();
-        
-        public Stack<PanelId> HidePanelsStack = new Stack<PanelId>(10);
+        public Stack<PanelId> HidePanelsStack = new(10);
 
         // 每个 UIPakcage 对应的 Asset 地址。
-        public MultiMap<string, string> UIPackageLocations = new MultiMap<string, string>();
+        public MultiMap<string, string> UIPackageLocations = new();
     }
 }

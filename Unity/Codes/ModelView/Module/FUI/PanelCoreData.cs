@@ -1,7 +1,7 @@
 ﻿namespace ET
 {
-    [ChildType(typeof(FUIEntity))]
-    public class PanelCoreData
+    [ComponentOf(typeof(FUIEntity))]
+    public class PanelCoreData : Entity, IAwake
     {
         public UIPanelType panelType = UIPanelType.Normal;
     }

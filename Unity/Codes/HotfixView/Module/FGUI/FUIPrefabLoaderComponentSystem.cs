@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ET
 {
 	[FriendClass(typeof(FUIPrefabLoaderComponent))]
-	public static class FGUIPrefabLoaderComponentSystem
+	public static class FUIPrefabLoaderComponentSystem
 	{
 		[ObjectSystem]
 		public class AwakeSystem1 : AwakeSystem<FUIPrefabLoaderComponent, GGraph, string>
