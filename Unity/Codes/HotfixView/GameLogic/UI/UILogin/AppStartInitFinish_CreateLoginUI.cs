@@ -7,9 +7,10 @@ namespace ET
 		protected override async ETTask Run(EventType.AppStartInitFinish args)
 		{
 			// UIHelper.Create(args.ZoneScene, UIType.UILogin, UILayer.Mid).Coroutine();
-			CommonBinder.BindAll();
 			FUIComponent fguiComponent = args.ZoneScene.GetComponent<FUIComponent>();
-			await fguiComponent.ShowPanelAsync<LoginPanel>();
+			
+			await fguiComponent.LoadPkg("Common");
+			await fguiComponent.ShowPanelAsync<Entity>(PanelId.LoginPanel);
 		}
 	}
 }
